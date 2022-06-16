@@ -28,10 +28,7 @@
                 if (typeof (url) != 'undefined') {
                     window.location = url;
                 }
-                console.log('happening')
             };
-
-            console.log("Privacy allowed");
 
             function gtag_report_conversion(url) {
                 gtag('event', 'conversion', {
@@ -45,7 +42,6 @@
                 let conversionLinks = document.getElementsByClassName("download-client");
                 for (var i = 0; i < conversionLinks.length; i++) {
                     conversionLinks[i].addEventListener("click", function () {
-                        console.log("reporting conversion")
                         gtag_report_conversion();
                     });
                 }
