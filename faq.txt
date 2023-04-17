@@ -2,16 +2,16 @@
 Getting started
 
 >>question-
+What is the easiest way to get started?
+
+>>answer-
+When you start httpiness, Welcome screen will be shown. Click 'Send http request' label on Welcome screen and a simple predefined request will appear in the Workspace. Press 'Send' button to send request.
+
+>>question-
 Why is httpiness unique?
 
 >>answer-
 Software engineers, while developing APIs, often need to send multiple requests before they can send request they want to test. For example, if developers want to test request which deletes entry in database, they need to authenticate, create entity, query entity to validate its creation, delete entity (which is a request to be tested), and then query entity again (to validate that delete did its job). This is what we call slalom testing. Httpiness is created with this workflow in mind. Httpiness offers simplicity and effective parametrization strategy to maximize development efficiency. For example, httpiness is one of rare clients which render whole request in the single view (no tabs for every part of request).
-
->>question-
-What is the easiest way to get started?
-
->>answer-
-When you start httpiness, Welcome screen will be shown. Click 'Experiment' label on Welcome screen so Experiment collection will appear in Request Browser. This special collection already has few predefined requests. Select any of them and they will appear in the Workspace. Press 'Send' button to send request.
 
 >>section-
 Collections
@@ -42,7 +42,7 @@ Once you do that, new httpiness collection will be automatically opened.
 What is the Experiment collection?
 
 >>answer-
-Experiment collection is the collection for sketching and experimenting with requests. This special collection is not stored in file and cannot be shared. There is only single Experiment collection. Show Experiment collection in Request Browser by clicking 'Experiement' button in Request Browser's header.
+Experiment collection is the collection for sketching and experimenting with requests. This special collection is not stored in file and cannot be shared. There is only single Experiment collection. Show Experiment collection in Request Browser by clicking 'Experiment' button in Request Browser's header.
 
 >>question-
 Should I save collection after making change?
@@ -308,14 +308,28 @@ Is it possible to change parameter's value when it is configured by applying pre
 >>answer-
 Yes. Applying a preset does not bound parameters to the values from the preset. Parameters can be changed at any time. Presets can be reapplied at any time as well.
 
+>>question-
+Is it possible to auto-hide parameters panel?
+
+>>answer-
+Yes, when responses are shown in the workspace (not in the console). Click the 'Settings' button in the upper right corner of the window, and toggle 'Auto-hide parameters' checkbox.
+
 >>section-
 Responses and History
 
 >>question-
-How to see request and response history?
+Where is the response shown?
 
 >>answer-
-Click 'Responses & History' label in the bottom central part of the window to open Responses & History console. The console will be opened automatically when any request is being sent. Left panel of console contains history of executed request.
+There are two places where the response can be shown: (1) in the 'Responses & History' console which expands when a request is sent, or (2) in the Workspace, next to pinned requests.
+
+By default, the response will be shown in the Workspace if there is enough space on the screen. Otherwise, it will be shown in the console. Click 'Settings' button in the upper right corner of the window to explicitly configure location of the response - console, workspace or automatic.
+
+>>question-
+How to see history of sent requests?
+
+>>answer-
+Previously sent requests are shown in the 'History' panel. When the response is shown in the console, 'History' panel is located left from the response. When the response is shown in the Workspace, click on the request name above the response to show the history.
 
 >>question-
 How to see request execution details?
@@ -330,10 +344,10 @@ How to hide response labels?
 Click the 'Settings' button in the upper right corner of the window, and toggle 'Hide response labels' checkbox.
 
 >>question-
-How to resend request from Responses & History console?
+How to resend request from 'History' list of sent requests?
 
 >>answer-
-Move you cursor over one of executed requests, and resend button will appear. Click the button to resend the request.
+When 'History' is shown, move you cursor over one of executed requests, and resend button will appear. Click the button to resend the request.
 
 >>question-
 How to clear request history?
